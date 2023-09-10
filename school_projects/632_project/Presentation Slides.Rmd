@@ -1,0 +1,400 @@
+---
+title: "Gender Wage Inequality in STEM"
+author: "Lydia Gibson, Sara Hatter & Ken Vu"
+date: 'April 28, 2022'
+output:
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+# Introduction
+```{r set-options, echo=FALSE, cache=FALSE}
+#options(width = 30)
+```
+
+```{r echo=FALSE}
+dat1 <- read.csv("women-stem.csv")
+library(pacman)
+suppressWarnings(p_load(dplyr, ggplot2, ggpubr, scales, MASS, car, lmtest, 
+                        ggrepel, faraway, ggcorrplot))
+options(scipen = 100) # remove scientific notation
+```
+
+Do we choose our career path based on gender-based social roles or based on top
+salary? Although many countries, such as China, have incorporated women into their labor power to become a powerful economy$^1$, women still choose careers that are more in sync to gender stereotype. 
+
+Undoubtedly, personality characteristics associated with women, are sympathy, kindness, warmth, and reflect a concern about other people. However, the traits associated to men are achievement orientation and ambitiousness, and concern about accomplishing tasks. These characteristics are very noticeable in the stereotypical association of men in the worker role and women in the family role$^2$. 
+
+More schools are encouraging girls to enter STEM programs and provided them with many resources to succeed in these types of careers. Despite these efforts, women tend to choose career where the median pay is lower.
+
+
+# Data Description
+
+The data was obtained from the American Community Survey 2010-2012 Public Use Microdata Series and has been already subsetted to only concern STEM majors (particularly with an interest in women majoring in STEM).  For each row in the data set (which represents one major), there’s a collection of details and statistics about the major, such as the type of major (i.e. Engineering, Health Science, etc), the proportion of women in the sample of individuals working in that particular field, and other relevant pieces of information.
+
+
+# Data set
+
+* Link to data set: https://github.com/fivethirtyeight/data/blob/master/college-majors/women-stem.csv
+
+The dimensions of the data set are 76 rows (`Major`) by 9 columns.
+
+```{r echo=FALSE, size="tiny", include=FALSE}
+head(dat1, n=3)
+
+```
+
+## Variables
+
+- `Median`: Median earnings of full-time, year-round workers
+
+- `Rank`: Rank by median earnings
+
+- `Major_code`: Major code, FO1DP in ACS PUMS
+
+- `Major`: Major description
+
+- `Major_category`: Category of major from Carnevale et al
+
+- `Total`: Total number of people with major
+
+- `Men`: Male graduates
+
+- `Women`:Female graduates
+
+- `ShareWomen`: Women as share of total
+
+# Research Question and Goals
+
+Our research question tries to find associations within STEM college majors that influence median wages. Our goals are to explore the data for STEM college majors and to create a predictive model for median wages.
+
+
+## Research Question: 
+
+What associations exist within STEM college majors that have an effect on median wages?
+
+## Goals: 
+
+* To explore the data for STEM college majors.
+* To create a predictive model for median wage.
+
+
+# Stacked Bar chart: Gender Proportions per Major Category
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# remove Rank, Major_code, and Major
+dat2 <- dat1[,-c(1,2,3)] 
+# Get totals for men and women for each major category
+dat_stats <- rbind(
+  # Get totals for men
+  dat2 %>% group_by(Major_category) %>%summarize(Grand_Total = sum(Men), Proportion=Grand_Total/sum(Total)) %>%
+mutate(Sex="Men", labelpos=Proportion/2),
+# Get totals for women
+dat2 %>% group_by(Major_category) %>%summarize(Grand_Total = sum(Women), Proportion=Grand_Total/sum(Total)) %>%
+  mutate(Sex="Women", labelpos=1 - (Proportion/2))) %>% mutate(Sex = Sex %>% factor(levels=c("Women","Men")))
+#dat_stats
+
+dat_stats %>% ggplot(aes(x=Major_category,y=Proportion,fill=Sex)) +
+  stat_summary(geom = "bar", position="fill") +# stack side by side bars
+  theme(axis.text.x=element_text(angle = 7.5),# get x axes labels to fit
+        plot.title=element_text(size=17, hjust=0.5)) +# center title
+  geom_text(aes(label = paste0(round(100*Proportion,2),"%"),y=labelpos),size = 3,) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(x="Major Category", y="Proportion of Gender (%)",
+       title="Gender Proportions per Major Category")
+```
+
+
+
+# Exploratory Data Analysis
+
+`Median` wage of the individual majors ranged from $\$26,000$ for Zoology  to $\$110,000$ for Petroleum Engineering ($Mdn = \$44350, M = \$46118$) . 
+
+```{r echo=FALSE, include=FALSE}
+summary(dat2$Median)
+```
+
+We have set `Major_category` as a factor with the following levels:
+
+```{r echo=FALSE,include=FALSE}
+#set major category as a factor
+dat2$Major_category <- as.factor(dat2$Major_category)
+levels(dat2$Major_category)
+```
+
+* [1]"Biology & Life Science"  
+* [2]"Computers & Mathematics" 
+* [3]"Engineering"            
+* [4]"Health"                  
+* [5]"Physical Sciences" 
+
+so that we can further distinguish the variation of share of women within major categories and the median wages each major category earns.
+
+# Box Plot: Median Wage by Major Category
+
+```{r echo=FALSE}
+dat2 %>% ggplot(aes(x=Major_category,y=Median)) + geom_boxplot() +
+  labs(x="Major Category", y="Median Salary ($)",
+title = "Median Salary($) by Major Category") + theme(axis.text.x=element_text(angle=7.5), # adjust x labels for no overlap
+plot.title=element_text(size=17, hjust=0.5)) # adjust title to center
+```
+
+
+# Test differences between major categories
+
+Based on our boxplot, we noticed there may be a significant difference between median wage by major category so we ran an ANOVA to test our hypothesis:
+
+$H_0:\alpha_1=\alpha_2=\alpha_3=\alpha_4=\alpha_5= 0$ 
+
+$H_A:\alpha_i\ne 0, i=1,2...,5$ 
+
+```{r echo=FALSE, include=FALSE}
+# anova of major categories
+anova(lm(Median~Major_category,data=dat2))
+```
+
+Based on our one-way ANOVA, we reject the null hypothesis and concluded that there are statistically significant differences in Median Wages between Major Categories $(F(4, 71) = [16.71], p = [0.00000001013])$.
+
+# Jitter plot: Median Wage by Major Category 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Got the outliers
+outlier_pts <- dat1 %>%filter(Median > 100000 |(Median > 60000 & Major_category == "Physical Sciences"))
+dat1 %>%ggplot(aes(x=Major_category,y=Median, color=Major_category, size=ShareWomen)) +
+  geom_jitter(alpha = 1/4) +# make circle transparent to show overlap
+  theme(axis.text.x = element_text(angle=30, vjust=0.65),
+        plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        legend.position = c(0.92,0.82)) +
+  geom_text(data=outlier_pts, aes(label=Major, size=0.089),nudge_y=2, vjust=-1.6, hjust=0.7) + # label outliers
+  labs(x="Major Category", y="Median Salary ($)",title="Median Salary($) by Major Category", ) +
+  guides(color=FALSE, # remove Major_category legend, remove "a" from legend
+         size=guide_legend(override.aes = list(alpha = 1, size = c(3,4.5,5.8))))
+```
+
+
+
+
+# Further Cleaning
+
+* For our analysis, we also removed the columns `Major_code` and `Rank`  as they aren’t relevant predictors for our purposes.
+
+```{r echo=FALSE}
+head(dat2)
+```
+
+
+```{r echo=FALSE, include=FALSE}
+head(dat2, n=3)
+
+```
+
+
+
+# Scaterplot Matrix
+
+```{r echo=FALSE}
+pairs(Median~., data=dat2[,-c(1)])
+```
+
+# Scatterplot Matrix Insights
+
+* As expected, there seems to be a negative association between `ShareWomen` and `Median`. This is one of the main motivators for our research.
+
+* There may be an issues of multicollinearity between `Total`, `Men`, `Women` and `ShareWomen`, so we will run some analyses to assess which of these predictors could be removed from our model. To address this, we will run a correlation matrix.
+
+# 
+
+```{r echo=FALSE}
+corr_matrix <- cor(dat2[,-c(1)])
+corrp.mat <- cor_pmat(dat2[,-c(1)])
+ggcorrplot(corr_matrix, hc.order=T, lab=T, 
+           colors= c("white","lightskyblue2","dodgerblue4"))
+```
+
+
+# Methods and Results: Checking Assumptions
+
+Before beginning our analysis, we began by exploring the normality within our response variable, `Median`. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ dat2 %>% ggplot(mapping=aes(x=(Median))) + geom_histogram(bin.width=5000) +
+  geom_density(aes(y=..density.. * (nrow(dat2) * 5000)), color="red") + 
+  labs(y="count")
+```
+
+
+
+# Box Cox
+
+We notices that there was some skewing, so we decided to do a Box-Cox test to see if a transformation is necessary.
+
+```{r echo=FALSE}
+lm_full <- lm(Median~.,data=dat2)
+boxcox(lm_full, lambda=seq(-2.5, 0.5, by =0.5))
+```
+
+# Box-Cox Summary output
+
+```{r echo=FALSE}
+summary(powerTransform(lm_full))
+```
+
+Our rounded power is -1 so we will do an inverse transformation of the response
+`Median`.  However, model interpretability may be difficult.
+
+
+# Building Predicitive Model
+
+We started with the full additive model but it removed to many variables so we decided switched to a model with interactions.
+
+```{r include=F, echo=F}
+options(scipen=4, width = 30)
+#interaction model
+lm1 <- lm((Median^(-1)) ~., data=dat2[-c(2)])
+summary(step(lm1))
+
+```
+
+![](output_building_predictive_model_slide.png){width=90%} 
+
+# Building Predicitive Model w/ Interaction
+
+Since the additive model removed all but one predictor, we reran the model with interactions
+
+```{r echo=T, include=F}
+options(scipen=4)
+#interaction model
+lm1 <- lm((Median^(-1)) ~(.)^2, data=dat2[-c(2)])
+summary(lm1) 
+```
+
+
+## Running step-wise to reduce the model's AIC
+![](slide_run_step_wise.png){width=80%} 
+```{r echo=FALSE, include=FALSE}
+
+#step-wise selection
+lm2 <- step(lm1)
+summary(lm( (Median^(-1))~Major_category + Men + Women + ShareWomen + 
+              Men:ShareWomen, data=dat2[-c(2)]))
+```
+
+
+# Test significance of predictor `Women`
+![](slide_test_sig_women.png){width=90%} 
+```{r echo=F, include=F}
+# create reduced model
+lm_reduced <- lm((Median^(-1)) ~ Major_category + Men + ShareWomen + Men:ShareWomen,
+                 data=dat2[-c(2)])
+
+#anova reduced vs full
+anova(lm_reduced, lm2)
+```
+
+Given $p=0.7394>\alpha=0.05$, we fail to reject $H_0$ (`Women` is not a significant
+predictor).
+Thus, we can remove the predictor `Women`.
+
+# Getting the reduced final model
+![](slide_get_reduce_model.png){width=90%} 
+```{r echo=F, include=F}
+summary(lm_reduced)
+```
+
+$Y^{-1} = 2.71 \cdot 10^{-5} -3.441 \cdot 10^{-6}x_1 - 8.87 \cdot 10^{-6} x_2 -3.991 \cdot 10^{-7} x_3 -3.09\cdot 10^{-6}x_4 -4.14 \cdot 10^{-11}x_5 +1.08 \cdot 10^{-6}x_6 +8.97\cdot 10^{-11} x_5 \cdot x_6$
+
+# Predictive power
+
+
+
+```{r echo=FALSE, include=FALSE}
+new_x<-data.frame(Major_category="Computers & Mathematics", Men=2960, ShareWomen=0.52647576
+)
+Median_Stats<-predict(lm_reduced, newdata = new_x, type = "response", interval = "prediction")
+Median_Stats
+```
+
+Here we do a prediction interval for `Median`$^{-1}$ for Statistics & Decision Sciences then take the inverse so that our response is in our original units.
+```{r echo=F}
+Median_Stats^-1
+```
+
+Looking at the actual `Median` for Statistics & Decision Sciences, we see that the actual response is within our prediction interval of (30997,61595).
+```{r echo=FALSE, include=FALSE}
+dat1[35,3:9]
+```
+
+|Major|Major Category|Men|Share Women| Median|
+|-|-|-|-|-|
+|STATISTICS AND DECISION SCIENCE|Computers & Mathematics|2960|0.5265|45000|
+
+
+# Model Diagnostics
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Standardized Residual vs Fitted plot
+stdresid_plt <- ggplot(mapping=aes(x=lm_reduced$fitted.values,
+                                   y=rstandard(lm_reduced))) +
+  geom_point() + labs(x="Fitted Values", y="Standardized Residuals") +
+  geom_hline(yintercept=0) + labs(title="Residuals vs Fitted") +
+  theme(plot.title = element_text(, size=17, hjust = 0.5)) + geom_smooth(se=F)
+# Normal QQ_plot
+norm_qqplt <- ggplot(mapping=aes(sample=rstandard(lm_reduced))) + stat_qq() +
+  stat_qq_line() + labs(y="Sample Quantitles", x="Theoretical Quantiles",
+                       title="Normal Q-Q Plot") +
+  theme(plot.title = element_text(size=17, hjust = 0.5))
+# Display the results
+ggarrange(stdresid_plt, norm_qqplt, ncol=2)
+
+```
+
+# Model Diagnostics (Numeric Tests)
+* Verifying constant variance ($\alpha=0.05$)
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+bptest(lm_reduced)
+```
+
+* Verifying normality of residuals ($\alpha=0.05$)
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+shapiro.test(rstandard(lm_reduced))
+```
+
+# Multicollinearity (VIF)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+round(vif(lm_reduced),2)
+```
+
+
+# Conclusion
+
+In conclusion
+
+- There is an association with gender and median wage of STEM majors.
+
+- We can predict the median wage of STEM majors based on the major category, total number of men in the major and total proportion of women in the major.
+
+- We all should have majored in Petroleum Engineering!
+
+# Further Research
+
+- If we had sex disaggregated data for median wage, we could see the difference in median wage by gender for each major.
+
+- If we had time series data, we could then see how median wage changes with an influx of women and/or exodus of men from a given major.
+
+- Since we only looked at STEM majors, it would be interesting to see if these same variables (`Major_category`, `Men`, `ShareWomen`) are associated with median wage for all majors.
+
+# Bibliography
+
+Etaugh, Claire A., and Judith S. Bridges. *Women's Lives: A Psychological Exploration.* 3rd ed., Pearson, 2013.
+
+Kristof, Nicholas D. *Half the Sky: Turning Oppression into Opportunity for Women Worldwide.* Three Rivers Press, 2010. 
+
+
+
+# Code Appendix
+
+For supplementary R script, visit 
+
+- https://github.com/lgibson7/Gender-Wage-Inequality-in-STEM

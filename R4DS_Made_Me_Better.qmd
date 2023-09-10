@@ -4,5 +4,67 @@ author: "Lydia Gibson"
 format: revealjs
 ---
 
+#Intro
 
-test test test
+![](images/high_school.jpeg)
+![](images/hairstyles.jpeg)
+![](images/prom.jpg)
+
+![](images/wvc_dressform.jpeg)
+
+# R4DS
+
+![](images/sketch1.jpeg)
+![](images/sketch1.jpeg)
+
+
+# GGplot2
+
+![](images/first_presentation.jpg)
+
+
+# Jon
+
+![](images/jon_speaker.png)
+![](images/jon_conf.jpeg)
+
+# Sketches
+
+![](images/sketch1.jpeg)
+![](images/sketch2.jpeg)
+![](images/sketch3.jpeg)
+
+# Fashion to Data
+
+![](images/ken_tweet.png)
+
+# DVS 
+
+![](images/dvs_cert.png)
+![](images/sketch1.jpeg)
+
+
+
+# Work and python
+
+![](images/intel_hex.jpg)
+
+# Future staR
+
+![](images/nantz_tweet.png)
+
+# Don't Quit
+
+![](images/graduation.jpeg)
+
+![](images/dont_quit.jpeg)
+
+![](images/comfort_zone.jpg)
+
+# Thank you
+![](images/octocat.png)
+![](images/web_logo.png)
+
+![](images/linkedin_logo.png)
+
+# Appendix
