@@ -3,68 +3,48 @@ title: "How the R4DS Online Learning Community Made Me a Better Student"
 author: "Lydia Gibson"
 format: revealjs
 ---
-
-#Intro
-
-![](images/high_school.jpeg)
-![](images/hairstyles.jpeg)
-![](images/prom.jpg)
-
-![](images/wvc_dressform.jpeg)
-
-# R4DS
-
-![](images/sketch1.jpeg)
-![](images/sketch1.jpeg)
+ 
+![](images/logo_r4ds.png) 
 
 
-# GGplot2
+## About Me
 
-![](images/first_presentation.jpg)
+![](images/lydia_hexwall.png)
 
+## My backstory
 
-# Jon
+![](images/lydia_wvc.jpeg)
 
-![](images/jon_speaker.png)
-![](images/jon_conf.jpeg)
+## My journey
 
-# Sketches
+![](images/journey.png)
+
+## Fashion Design to Data Viz
+
+![](images/tweet_ken.png)
+
+## Grammar of Graphics meets Elements of Design
 
 ![](images/sketch1.jpeg)
-![](images/sketch2.jpeg)
-![](images/sketch3.jpeg)
 
-# Fashion to Data
 
-![](images/ken_tweet.png)
+## GGplot2
 
-# DVS 
-
-![](images/dvs_cert.png)
-![](images/sketch1.jpeg)
+![](images/lydia_bookclub_ggplot2.jpg)
 
 
 
-# Work and python
 
-![](images/intel_hex.jpg)
 
-# Future staR
 
-![](images/nantz_tweet.png)
 
-# Don't Quit
 
-![](images/graduation.jpeg)
+## Thank you
 
-![](images/dont_quit.jpeg)
+![](images/lydia_gradcap.png)
 
-![](images/comfort_zone.jpg)
+LinkedIn: in/lgibson7
 
-# Thank you
-![](images/octocat.png)
-![](images/web_logo.png)
+GitHub: lgibson7
 
-![](images/linkedin_logo.png)
-
-# Appendix
+## Appendix
