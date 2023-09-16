@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+
+$theme-blue: #3E62A9;
+$theme-darkblue: #1F335A;
+$theme-white: #F7F8F9;
+$theme-yellow: #F4BA02;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$body-bg: $theme-darkblue;
+$body-color: $theme-white;
+$link-color: $theme-blue;
+$presentation-heading-color: lighten($theme-blue, 15%);
+
+
+$font-family-cursive: 'Lobster Two', cursive;
+$presentation-heading-font: 'Lobster', cursive;
+
+/*-- scss:rules --*/
+
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+
+.reveal .slide a {
+  text-decoration: underline;
+}

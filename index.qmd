@@ -1,0 +1,109 @@
+---
+title: "How the R4DS Online Learning Community Made Me a Better Student"
+author: "Lydia Gibson"
+# format: revealjs
+institute: "Posit::conf(2023)"
+date: "09-20-2023"
+date-format: "MMMM Do, YYYY | YYYY-MM-DD"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    slide-number: true
+    width: 1690
+    height: 1080
+    margin: .2
+    linkcolor: "#ffffff"
+    # highlight-style: github
+    # code-copy: true
+    # code-overflow: scroll
+    # code-block-bg: true
+    transition: fade
+css: "scripts/style.css"
+title-slide-attributes: 
+  data-background-image: "images/background_openbook.jpeg"
+  data-background-size: "stretch"
+  data-background-position: "center"
+  data-background-color: "#1a1a1a"
+#  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and give a glimpse into a different approach to learning data science. Before I do that, I have to say, I feel like I'm only talking here today because I stopped working 10 months ago. Let me explain. I didn't go off the deep end and quit my job or anything, but as you can see here..."
+transition: fade
+---
+
+
+ 
+![](images/logo_r4ds.png){.image-left} 
+
+
+## About Me
+
+
+::: columns
+::: {.column width="45%"}
+- Data Scientist at Intel
+
+- MS Stats, CSU East Bay, May 2023
+
+- BS Econ, SUNY Albany, May 2011
+:::
+:::
+
+![](images/lydia_hexwall.png){.image-left}
+
+
+
+## Fashion Design to Data Viz
+
+::: columns
+::: {.column width="45%"}
+
+:::
+:::
+
+![](images/tweet_ken.png){.image-left}
+
+
+## My backstory
+
+::: columns
+::: {.column width="45%"}
+
+:::
+:::
+
+![](images/lydia_wvc.jpeg){.image-left}
+
+## My journey
+
+![](images/journey.png)
+
+
+## Grammar of Graphics meets Elements of Design
+
+![](images/sketch1.jpeg)
+
+
+## GGplot2
+
+
+
+
+
+
+
+
+
+
+## Thank you
+
+::: columns
+::: {.column width="45%"}
+
+:::
+:::
+
+![](images/lydia_gradcap.png){.image-left}
+
+LinkedIn: in/lgibson7
+
+GitHub: lgibson7
+
+## Appendix
