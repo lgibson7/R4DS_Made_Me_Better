@@ -1,12 +1,15 @@
 ---
 title: "How the R4DS Online Learning Community Made Me a Better Student"
+author: "Lydia Gibson"
+# institute: "Posit::conf(2023)"
+# date: "09-20-2023"
+# date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 title-slide-attributes: 
   data-background-image: images/background_openbook.jpeg
   data-background-size: contain
   data-background-position: "center"
   # data-background-color: "#1a1a1a"
-author: "Lydia Gibson"
-# format: revealjs
+  data-notes: "Hi Everyone! My name is Lydia Gibson, and I'm really excited to be in front of you all today speaking about a community that is very near and dear to my heart. Today I'll be speaking to you about how the R4DS Online Learning Community Made Me a Better Student."
 format:
   letterbox-revealjs: 
     theme: [default, custom.scss]
@@ -20,12 +23,7 @@ format:
     # # code-overflow: scroll
     # # code-block-bg: true
     # transition: fade
-# institute: "Posit::conf(2023)"
-# date: "09-20-2023"
-# date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 # css: "scripts/style.css"
-# #  data-notes: ""
-# transition: fade
 ---
 
 
@@ -45,9 +43,13 @@ format:
 ![](images/lydia_hexwall.png){.image-right}
 
 
+::: notes
+-   Graduated in May with M.S. Stats
 
+-   Following month Data Scientist at Intel
 
-
+-   Couldn't have imagined this two years ago
+:::
 
 
 
