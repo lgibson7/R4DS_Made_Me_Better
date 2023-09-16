@@ -1,36 +1,33 @@
 ---
 title: "How the R4DS Online Learning Community Made Me a Better Student"
+title-slide-attributes: 
+  data-background-image: images/background_openbook.jpeg
+  data-background-size: contain
+  data-background-position: "center"
+  # data-background-color: "#1a1a1a"
 author: "Lydia Gibson"
 # format: revealjs
-institute: "Posit::conf(2023)"
-date: "09-20-2023"
-date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 format:
-  revealjs: 
+  letterbox-revealjs: 
     theme: [default, custom.scss]
-    slide-number: true
-    width: 1690
-    height: 1080
-    margin: .2
-    linkcolor: "#ffffff"
-    # highlight-style: github
-    # code-copy: true
-    # code-overflow: scroll
-    # code-block-bg: true
-    transition: fade
-css: "scripts/style.css"
-title-slide-attributes: 
-  data-background-image: "images/background_openbook.jpeg"
-  data-background-size: "stretch"
-  data-background-position: "center"
-  data-background-color: "#1a1a1a"
-#  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and give a glimpse into a different approach to learning data science. Before I do that, I have to say, I feel like I'm only talking here today because I stopped working 10 months ago. Let me explain. I didn't go off the deep end and quit my job or anything, but as you can see here..."
-transition: fade
+    # slide-number: true
+    # # width: 1690
+    # # height: 1080
+    # # margin: .2
+    # # linkcolor: "#ffffff"
+    # # highlight-style: github
+    # # code-copy: true
+    # # code-overflow: scroll
+    # # code-block-bg: true
+    # transition: fade
+# institute: "Posit::conf(2023)"
+# date: "09-20-2023"
+# date-format: "MMMM Do, YYYY | YYYY-MM-DD"
+# css: "scripts/style.css"
+# #  data-notes: ""
+# transition: fade
 ---
 
-
- 
-![](images/logo_r4ds.png){.image-left} 
 
 
 ## About Me
@@ -40,25 +37,18 @@ transition: fade
 ::: {.column width="45%"}
 - Data Scientist at Intel
 
-- MS Stats, CSU East Bay, May 2023
-
-- BS Econ, SUNY Albany, May 2011
-:::
-:::
-
-![](images/lydia_hexwall.png){.image-left}
-
-
-
-## Fashion Design to Data Viz
-
-::: columns
-::: {.column width="45%"}
+- M.S. Statistics, May 2023
 
 :::
 :::
 
-![](images/tweet_ken.png){.image-left}
+![](images/lydia_hexwall.png){.image-right}
+
+
+
+
+
+
 
 
 ## My backstory
@@ -69,27 +59,75 @@ transition: fade
 :::
 :::
 
-![](images/lydia_wvc.jpeg){.image-left}
+![](images/lydia_wvc.png){.image-right}
 
-## My journey
 
-![](images/journey.png)
-
+## About R4DS
 
 ## Grammar of Graphics meets Elements of Design
 
-![](images/sketch1.jpeg)
+![](images/sketch_ccc.png)
 
 
 ## GGplot2
 
+## Fashion Meet Data
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Fashion Design
+:::
+
+::: {.column width="60%"}
+Data Viz
+:::
+
+::::
+
+##
+
+![](images/tweet_ken.png){.image-right}
+
+## Adv. GGplots
+
+![](images/violin_box.png)
+
+## Quarto
+
+![](images/screenshot_blog.png)
 
 
 
+## Celebrate
+
+![](images/screenshot_wins_feedback.png) 
 
 
 
+## 
 
+![](images/journey.png)
+
+## Online
+
+![](images/picture_connectivity.jpeg)
+
+## Learning
+
+![](images/picture_lifelong.jpeg)
+
+## Community
+
+![](images/meme_ken.gif){.image-right}
+
+## Friendships
+
+![](images/lydia_conf_jon.jpeg)
+
+![](images/lydia_conf_june.png)
+
+![](images/lydia_conf_federica.png)
 
 
 ## Thank you
@@ -100,10 +138,9 @@ transition: fade
 :::
 :::
 
-![](images/lydia_gradcap.png){.image-left}
+![](images/lydia_gradcap.png){.image-right}
 
-LinkedIn: in/lgibson7
+![](images/qr_linktree_lydia.png)
 
-GitHub: lgibson7
 
 ## Appendix
