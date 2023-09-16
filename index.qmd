@@ -1,7 +1,7 @@
 ---
 title: "How the R4DS Online Learning Community Made Me a Better Student"
 author: "Lydia Gibson"
-# institute: "Posit::conf(2023)"
+institute: "Posit::conf(2023)"
 # date: "09-20-2023"
 # date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 title-slide-attributes: 
@@ -64,16 +64,42 @@ format:
 ![](images/lydia_wvc.png){.image-right}
 
 
+::: notes
+-   I wanted to be a fashion designer
+
+-   I fell in love with clothing because of my grandma
+
+-   I used to sketch based on seventeen and teen vogue
+:::
+
+
+## 
+
+
+
+::: notes
+-   I wasn't passionate about Data Science
+
+-   I had no previous programming skills
+
+-   I'd been out of school for a while
+
+-   That's where R4DS comes into the picture
+:::
+
 ## About R4DS
 
+::: notes
+-   R4DS is a Slack Workspace with learner of all skill levels
+
+-   Each week they have several concurrent book clubs
+
+-   I joined the ggplot2 book club
+:::
+
+
+
 ## Grammar of Graphics meets Elements of Design
-
-![](images/sketch_ccc.png)
-
-
-## GGplot2
-
-## Fashion Meet Data
 
 :::: {.columns}
 
@@ -87,18 +113,31 @@ Data Viz
 
 ::::
 
-##
+
+## DataViz Nerd
 
 ![](images/tweet_ken.png){.image-right}
+
+
+## CamcordeR
+
+## DVS
+
+
+![](images/dvs_cert.png)
 
 ## Adv. GGplots
 
 ![](images/violin_box.png)
 
-## Quarto
 
-![](images/screenshot_blog.png)
+## Friendships
 
+![](images/lydia_conf_jon.jpeg)
+
+![](images/lydia_conf_june.png)
+
+![](images/lydia_conf_federica.png)
 
 
 ## Celebrate
@@ -123,13 +162,7 @@ Data Viz
 
 ![](images/meme_ken.gif){.image-right}
 
-## Friendships
 
-![](images/lydia_conf_jon.jpeg)
-
-![](images/lydia_conf_june.png)
-
-![](images/lydia_conf_federica.png)
 
 
 ## Thank you
