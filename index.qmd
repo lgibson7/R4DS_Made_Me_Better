@@ -1,7 +1,7 @@
 ---
 title: "How the R4DS Online Learning Community Made Me a Better Student"
 author: "Lydia Gibson"
-institute: "Posit::conf(2023)"
+institute: "posit::conf(2023)"
 # date: "09-20-2023"
 # date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 title-slide-attributes: 
@@ -13,7 +13,7 @@ title-slide-attributes:
 format:
   letterbox-revealjs: 
     theme: [default, custom.scss]
-    # slide-number: true
+    slide-number: true
     # # width: 1690
     # # height: 1080
     # # margin: .2
@@ -26,21 +26,19 @@ format:
 # css: "scripts/style.css"
 ---
 
-
-
 ## About Me
 
-
 ::: columns
-::: {.column width="45%"}
-- Data Scientist at Intel
+::: {.column width="50%"}
+-   M.S. Statistics, May 2023
 
-- M.S. Statistics, May 2023
-
+-   Data Scientist at Intel
 :::
 :::
 
 ![](images/lydia_hexwall.png){.image-right}
+
+
 
 
 ::: notes
@@ -51,18 +49,14 @@ format:
 -   Couldn't have imagined this two years ago
 :::
 
-
-
 ## My backstory
 
 ::: columns
 ::: {.column width="45%"}
-
 :::
 :::
 
 ![](images/lydia_wvc.png){.image-right}
-
 
 ::: notes
 -   I wanted to be a fashion designer
@@ -72,10 +66,7 @@ format:
 -   I used to sketch based on seventeen and teen vogue
 :::
 
-
 ## 
-
-
 
 ::: notes
 -   I wasn't passionate about Data Science
@@ -87,7 +78,7 @@ format:
 -   That's where R4DS comes into the picture
 :::
 
-## About R4DS
+## 
 
 ::: notes
 -   R4DS is a Slack Workspace with learner of all skill levels
@@ -97,68 +88,51 @@ format:
 -   I joined the ggplot2 book club
 :::
 
+## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
 
 
-## Grammar of Graphics meets Elements of Design
+## DVS Mentorship Program {background-color="blue" background-image="images/dvs_cert.png" background-size="cover"}
 
-:::: {.columns}
 
-::: {.column width="40%"}
-Fashion Design
+
+
+## My takeaways
+
+- Find what you're passionate about and explore it's depths.
+
+- Being surrounded by folks more advanced than you is a gift, not a vulnerability.
+
+- Teaching is the best way to learn.
+
+## Final Remarks
+
+
+::: columns
+::: {.column width="50%"}
+
+> "I'm very excited to see how far we can take this. I want to make quality, free data literacy education available to anybody who wants it."
+
+-**Jon Harmon**, *Chief Community Manager and Data Scientist, R4DS Online Learning Community*
+
+:::
 :::
 
-::: {.column width="60%"}
-Data Viz
+![](images/lydia_conf_jon.jpeg){.image-right}
+
+
+## Get Involved!
+
+
+::: columns
+::: {.column width="30%"}
+- **Join:** *r4ds.io/join*
+
+- **Mentor:** *r4ds.io/join* (ping *@jonthegeek*)
+
+- **Sponsor:** *r4ds.io/sponsor*
+:::
 :::
 
-::::
-
-
-## DataViz Nerd
-
-![](images/tweet_ken.png){.image-right}
-
-
-## CamcordeR
-
-## DVS
-
-
-![](images/dvs_cert.png)
-
-## Adv. GGplots
-
-![](images/violin_box.png)
-
-
-## Friendships
-
-![](images/lydia_conf_jon.jpeg)
-
-![](images/lydia_conf_june.png)
-
-![](images/lydia_conf_federica.png)
-
-
-## Celebrate
-
-![](images/screenshot_wins_feedback.png) 
-
-
-
-## 
-
-![](images/journey.png)
-
-## Online
-
-![](images/picture_connectivity.jpeg)
-
-## Learning
-
-![](images/picture_lifelong.jpeg)
-
-## Community
 
 ![](images/meme_ken.gif){.image-right}
 
@@ -169,13 +143,9 @@ Data Viz
 
 ::: columns
 ::: {.column width="45%"}
-
 :::
 :::
 
 ![](images/lydia_gradcap.png){.image-right}
-
-![](images/qr_linktree_lydia.png)
-
 
 ## Appendix

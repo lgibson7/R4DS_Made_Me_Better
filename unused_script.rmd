@@ -1,0 +1,46 @@
+
+## Learning
+
+![](images/picture_lifelong.jpeg)
+
+
+## Community
+
+![](images/meme_ken.gif){.image-right}
+
+
+## Celebrate
+
+![](images/screenshot_wins_feedback.png) 
+
+
+
+## 
+
+![](images/journey.png)
+
+## Online
+
+![](images/picture_connectivity.jpeg)
+
+
+## Adv. GGplots
+
+![](images/violin_box.png)
+
+## CamcordeR
+
+
+
+## Grammar of Graphics meets Elements of Design
+
+
+  
+![](images/qr_linktree_lydia.png){width=10%}
+
+
+
+
+
+
+## {background-color="blue" background-image="images/plot_tableau.png" background-size="cover"}
