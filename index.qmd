@@ -66,7 +66,23 @@ format:
 -   I used to sketch based on seventeen and teen vogue
 :::
 
-## 
+##
+
+::: {layout="[1,1]" layout-valign="bottom"}
+![](images/sketch_uncolored.jpeg)
+
+![](images/sketch_colored.jpeg)
+:::
+
+##  {background-color="blue" background-image="images/lydia_prom1.png" background-size="cover"}
+
+
+
+## {.center}
+
+>"Nobody cares about R. They care about what they can do with R."
+
+-**David Keyes**, 2023 Cascadia R Conferenence 
 
 ::: notes
 -   I wasn't passionate about Data Science
@@ -98,11 +114,14 @@ format:
 
 ## My takeaways
 
+:::{.incremental}
 - Find what you're passionate about and explore it's depths.
 
 - Being surrounded by folks more advanced than you is a gift, not a vulnerability.
 
 - Teaching is the best way to learn.
+:::
+
 
 ## Final Remarks
 
@@ -148,4 +167,3 @@ format:
 
 ![](images/lydia_gradcap.png){.image-right}
 
-## Appendix
