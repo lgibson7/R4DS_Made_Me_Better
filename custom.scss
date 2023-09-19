@@ -13,10 +13,21 @@ $body-bg: $theme-darkblue;
 $body-color: $theme-white;
 $link-color: $theme-blue;
 $presentation-heading-color: lighten($theme-blue, 35%);
-$presentation-font-size-root: 100px;
+$presentation-font-size-root: 41px;
 
 $font-family-cursive: 'Lobster Two', cursive;
 $presentation-heading-font: 'Lobster', cursive;
+
+.larger{font-size:200%;}
+.large{font-size:150%;}
+.medium{font-size: 115%;}
+.smedium{font-size: 90%;}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 
 /*-- scss:rules --*/
 

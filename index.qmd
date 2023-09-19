@@ -1,7 +1,7 @@
 ---
 title: "How the R4DS Online Learning Community Made Me a Better Student"
 author: "Lydia Gibson"
-institute: "posit::conf(2023)"
+# institute: "posit::conf(2023)"
 # date: "09-20-2023"
 # date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 title-slide-attributes: 
@@ -93,15 +93,21 @@ format:
 ## {.center}
 
 
-:::{.fragment .fade-in .fade-out}
-[**I didn't care about R.**]{.r-fit-text} 
+:::{.fragment .fade-out}
+[**I didn't care about R.**]{.r-fit-text .absolute top="150"} 
 :::
 
-:::{.fragment}
+:::::{.fragment .absolute top="70"}
+::: {.larger }
 > "Nobody cares about R. ***They care about what you can do with R.***"
 
--**David Keyes**, *2023 Cascadia R Conference* 
 :::
+
+::: {.large}
+-**David Keyes**, *2023 Cascadia R Conference*
+:::
+
+:::::
 
 
 ::: notes
@@ -114,6 +120,16 @@ format:
 -   That's where R4DS comes into the picture
 :::
 
+
+
+## {background-color="blue" background-image="images/screenshot_presentation_ggplot2.png" background-size="cover"}
+
+
+## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
+
+
+
+
 ## 
 
 ::: notes
@@ -124,10 +140,6 @@ format:
 -   I joined the ggplot2 book club
 :::
 
-## {background-color="blue" background-image="images/screenshot_presentation_ggplot2.png" background-size="cover"}
-
-
-## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
 
 
 ## DVS Mentorship Program {background-color="blue" background-image="images/dvs_cert.png" background-size="cover"}
@@ -138,7 +150,7 @@ format:
 
 ## My takeaways
 
-:::{.incremental}
+:::{.incremental .large}
 
 - Being surrounded by folks more advanced than you is a gift, not a curse.
 
@@ -155,7 +167,7 @@ format:
 
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="30%" .medium}
 - **Join:** *r4ds.io/join*
 
 - **Mentor:** *r4ds.io/join* (ping *@jonthegeek*)
@@ -171,13 +183,18 @@ format:
 
 
 ::: columns
-::: {.column width="50%"}
+::::: {.column width="50%"}
 
+:::{.medium}
 > "I'm very excited to see how far we can take this. I want to make quality, free data literacy education available to anybody who wants it."
-
--**Jon Harmon**, *Chief Community Manager and Data Scientist, R4DS Online Learning Community*
-
 :::
+
+
+:::{.smedium}
+-**Jon Harmon**, *Chief Community Manager and Data Scientist, R4DS Online Learning Community*
+:::
+
+:::::
 :::
 
 ![](images/lydia_conf_jon.jpeg){.image-right}
