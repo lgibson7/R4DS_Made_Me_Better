@@ -94,17 +94,19 @@ format:
 
 
 :::{.fragment .fade-out}
-[**I didn't care about R.**]{.r-fit-text .absolute top="150"} 
+[**I didn't care about R.**]{.r-fit-text .absolute top="200"} 
 :::
 
-:::::{.fragment .absolute top="70"}
+:::::{.fragment .absolute top="60"}
 ::: {.larger }
-> "Nobody cares about R. ***They care about what you can do with R.***"
+> "Nobody cares about R.... ***They care about what you can do with R.***"
 
 :::
 
 ::: {.large}
--**David Keyes**, *2023 Cascadia R Conference*
+-**David Keyes**, 
+
+*2023 Cascadia R Conference*
 :::
 
 :::::
@@ -191,7 +193,9 @@ format:
 
 
 :::{.smedium}
--**Jon Harmon**, *Chief Community Manager and Data Scientist, R4DS Online Learning Community*
+-**Jon Harmon**, 
+
+*R4DS Chief Community Manager*
 :::
 
 :::::
