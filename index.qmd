@@ -38,7 +38,7 @@ format:
 
 ![](images/lydia_hexwall.png){.image-right}
 
-
+![](images/qr_linktree_lydia.png){.absolute bottom=0 left=0 width=110 height=110}
 
 
 ::: notes
@@ -80,9 +80,18 @@ format:
 
 ## {.center}
 
->"Nobody cares about R. They care about what they can do with R."
 
--**David Keyes**, 2023 Cascadia R Conferenence 
+:::{.fragment .fade-out}
+[**Nobody cares about R.**]{.r-fit-text} 
+:::
+
+:::{.fragment}
+> "Nobody cares about R. ***They care about what they can do with R.***"
+:::
+
+:::{.fragment}
+-**David Keyes**, *2023 Cascadia R Conference* 
+:::
 
 ::: notes
 -   I wasn't passionate about Data Science
@@ -104,12 +113,16 @@ format:
 -   I joined the ggplot2 book club
 :::
 
+## {background-color="blue" background-image="images/screenshot_presentation_ggplot2.png" background-size="cover"}
+
+
 ## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
 
 
 ## DVS Mentorship Program {background-color="blue" background-image="images/dvs_cert.png" background-size="cover"}
 
 
+## {background-color="blue" background-image="images/screenshot_wins_feedback.png" background-size="cover"}
 
 
 ## My takeaways
