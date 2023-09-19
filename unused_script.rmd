@@ -40,6 +40,7 @@
 
 
 
+##  {background-color="blue" background-image="images/lydia_prom1.png" background-size="cover"}
 
 
 
