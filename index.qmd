@@ -106,7 +106,7 @@ _   I even designed my own prom dress
 
 
 :::{.fragment .fade-out}
-[**I didn't care about R.**]{.r-fit-text .absolute top="200"} 
+[**I didn't care about R...**]{.r-fit-text .absolute top="200"} 
 :::
 
 :::::{.fragment .absolute top="60"}
@@ -133,23 +133,12 @@ _   I even designed my own prom dress
 :::
 
 
-## {background-color="black" background-image="images/journey.png" background-size="contain"}
-
-::: notes
--   Returned to school in 30s
-
--   Completed BS decade earlier
-
--   Needed to supplement what learned in class
-
--   Needed to find something I was interested in
-:::
 
 
 ## 
 
 :::{.fragment}
-[**Then I learned about ggplot2.**]{.r-fit-text .absolute top="300"} 
+[**until I learned about DataViz.**]{.r-fit-text .absolute top="300"} 
 :::
 
 ::: notes
@@ -162,7 +151,6 @@ _   I even designed my own prom dress
 :::
 
 
-## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
 
 
 ## 
@@ -206,6 +194,9 @@ _   I even designed my own prom dress
 
 ## {background-color="blue" background-image="images/screenshot_presentation_ggplot2.png" background-size="cover"}
 
+
+
+## {background-color="black" background-image="images/tweet_ken.png" background-size="cover"}
 
 ## {background-color="black" background-image="images/plot_project_632.png" background-size="80%"}
 
