@@ -1,3 +1,15 @@
+# date-format: "MMMM Do, YYYY | YYYY-MM-DD"
+  # data-background-color: "#1a1a1a"
+    # # width: 1690
+    # # height: 1080
+    # # margin: .2
+    # # linkcolor: "#ffffff"
+    # # highlight-style: github
+    # # code-copy: true
+    # # code-overflow: scroll
+    # # code-block-bg: true
+    # transition: fade
+# css: "scripts/style.css"
 
 ## Learning
 
@@ -45,3 +57,15 @@
 
 
 ## {background-color="blue" background-image="images/plot_tableau.png" background-size="cover"}
+
+## {background-color="black" background-image="images/journey.png" background-size="contain"}
+
+::: notes
+-   Returned to school in 30s
+
+-   Completed BS decade earlier
+
+-   Needed to supplement what learned in class
+
+-   Needed to find something I was interested in
+:::
