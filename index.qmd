@@ -223,7 +223,7 @@ _   I even designed my own prom dress
 
 - **Mentor:** *r4ds.io/join* (ping *@jonthegeek*)
 
-- **Sponsor:** *r4ds.io/sponsor*
+- **Donate:** *r4ds.io/donate*
 :::
 :::
 
